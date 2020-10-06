@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<style>
+			img {
+				max-width: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 onclick="sayHi()">
+			JavaScript is awesome!
+		</h1>
+		<p id="remove">
+			Remove me!
+		</p>
+
+		<!--  -->
+		<input type="text" name="message">
+
+		<!-- Remove something from the DOM when the button is clicked -->
+		<button>
+			Remove something
+		</button>
+
+		<!-- Add something to the DOM when the button is clicked -->
+		<button onclick="add()">
+			Add something
+		</button>
+
+		<button onclick="increment()">
+			Add one!
+		</button>
+		<span id="result"></span>
+
+		<script>
+
+
+			let counter = 0;
+			function increment () {
+				counter++;
+				document.getElementById('result').innerText = counter;
+			}
+
+
+			function add() {
+				setTimeout(function () {
+
+					let p = document.createElement('p');
+					p.innerText = 'Hello there' + counter;
+					document.body.appendChild(p);
+
+				}, 3000);
+			}
+
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+<html>
+	<body>
+		<button onclick="add()">Add to array</button>
+		<button onclick="remove()">Remove from array</button>
+		<script>
+			// object literal
+			let person = {
+				name: 'Alice',
+				age: 30,
+				greet: function (language) {
+
+					let message = '';
+					if (!language || language == 'en') {
+						message = 'Hello, I am ';
+					}
+					else if (language == 'cy') {
+						message = 'Bore da, dwi yw ';
+					}
+
+					return message + this.name;
+				}
+			};
+
+			alert( person.greet('cy') );
+
+
+
+
+
+
+
+			let things = [];
+			
+            // One function that adds some (any?!) to an array
+            // -> console.log(...) the remaining array
+            function add() {
+            	things.push('Hello');
+            	console.log(things);
+            }
+
+            // One function that removes any item from the array
+            // -> console.log(...) the remainining array
+            function remove() {
+            	things.pop();
+            	console.log(things);
+            }
+
+
+		</script>
+	</body>
+</html>
